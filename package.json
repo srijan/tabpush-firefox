@@ -1,9 +1,13 @@
 {
-  "name": "tabpush",
-  "fullName": "TabPush",
-  "description": "send tabs to others",
-  "author": "Srijan Choudhary <srijan4@gmail.com>",
-  "license": "MPL 1.1/GPL 2.0/LGPL 2.1",
-  "version": "0.1",
-  "dependencies": ["toolbarbutton", "addon-kit"]
+    "name": "tabpush", 
+    "license": "MPL 1.1/GPL 2.0/LGPL 2.1", 
+    "author": "Srijan Choudhary <srijan4@gmail.com>", 
+    "version": "0.1", 
+    "dependencies": [
+        "toolbarbutton", 
+        "addon-kit"
+    ], 
+    "fullName": "TabPush", 
+    "id": "jid1-YwKZU08h3AuACg", 
+    "description": "send tabs to others"
 }
