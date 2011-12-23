@@ -9,5 +9,6 @@
     ], 
     "fullName": "TabPush", 
     "id": "jid1-YwKZU08h3AuACg", 
-    "description": "send tabs to others"
+    "description": "send tabs to others",
+    "icon": "data/icon.png"
 }
