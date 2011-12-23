@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <style>
         body {
-            text-align: center;
+            text-align:center;
         }
-        .leftAlign {
-            text-align: left;
+        #sendingArea {
+            text-align:left;
         }
-        .italicsText {
-            font-style: italic;
+        #boxesArea {
+            text-align:center;
         }
     </style>
 </head>
 <body>
-<p class="leftAlign">Send current tab to:</p>
-<p><input type="text"/></p>
-<p><button>Send</button></p>
-<hr/>
-<p class="italicsText">No tabs waiting</p>
+<h3>TabPush</h3>
+<div id="sendingArea">
+    <form action="" class="form-stacked">
+        <label for="destinationInput">Send current tab to:</label>
+        <input class="medium" id="destinationInput" name="destinationInput" type="text" />
+        <button class="btn primary">Send</button>
+    </form>
+</div>
+
+<div id="boxesArea">
+    <div id="boxesNav">
+        <ul class="breadcrumb">
+            <li class="active">Inbox<span class="divider">|</span></li>
+            <li><a href="#">Outbox</a></li>
+        </ul>
+    </div>
+    <div id="boxesContent">
+        <p class="muted">No tabs in your inbox</p>
+    </div>
+</div>
 </body>
 </html>
