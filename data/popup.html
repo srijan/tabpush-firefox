@@ -3,6 +3,11 @@
   <head>
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <script type="text/javascript" src="http://localhost:8080/nowjs/now.js"></script>
+    <script type="text/javascript">
+      function init() {
+        //document.getElementById("destinationInput").focus();
+      }
+    </script>
     <style>
       html {
         overflow: hidden;
@@ -10,8 +15,15 @@
       body {
         text-align:center;
       }
+      h3 {
+        margin-bottom:-10px;
+      }
+      label {
+        padding: 2px;
+      }
       #sendingArea {
         text-align:left;
+        margin-bottom: 5px;
       }
       #boxesArea {
         text-align:center;
@@ -21,7 +33,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="init()">
     <h3>TabPush</h3>
     <div id="sendingArea">
       <label for="destinationInput">Send current tab to:</label>
