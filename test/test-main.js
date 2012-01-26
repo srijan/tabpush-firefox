@@ -10,7 +10,7 @@ exports.test_id = function(test) {
 
 exports.test_url = function(test) {
   require("request").Request({
-    url: "http://www.mozilla.org/",
+    url: "https://www.tabpush.com/",
     onComplete: function(response) {
       test.assertEqual(response.statusText, "OK");
       test.done();
@@ -19,7 +19,7 @@ exports.test_url = function(test) {
   test.waitUntilDone(20000);
 };
 
-exports.test_open_tab = function(test) {
+/*exports.test_open_tab = function(test) {
   const tabs = require("tabs");
   tabs.open({
     url: "http://www.mozilla.org/",
@@ -29,4 +29,4 @@ exports.test_open_tab = function(test) {
     }
   });
   test.waitUntilDone(20000);
-};
+};*/

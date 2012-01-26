@@ -21,11 +21,16 @@
       .inputBox {
         margin: 10px auto;
       }
+      #errorText {
+        color: red;
+        display: none;
+      }
     </style>
   </head>
   <body>
     <div id="page">
       <h3>Tabpush Options</h3>
+      <p>Login below, or <a href="error.html" onclick="return true;">Register a new account</a></p>
       <div id="credentialsForm">
         <div class="inputBox">
           <label for="loginInput">Login:</label>
@@ -36,9 +41,10 @@
           <input id="passwordInput" name="passwordInput" type="password"></input>
         </div>
         <div class="inputBox">
-          <button id="saveButton" class="btn primary">Save</button>
-          <button id="cancelButton" class="btn secondary">Cancel</button>
+          <button id="saveButton" class="btn primary">Login</button>
+          <button id="cancelButton" class="btn secondary">Close</button>
         </div>
+        <div id="errorText">Nothing here</div>
       </div>
     </div>
   </body>
