@@ -6,6 +6,7 @@ DNode.connect('www.tabpush.com',443,{ secure : true },function (remote) {
   self.port.on("serverLogin", function(login,password) {
     remote.userLogin(login,password, function(s) {
       if(s) {
+        self.port.emit("loginSucceeded");
         session = s;
       }
       else {

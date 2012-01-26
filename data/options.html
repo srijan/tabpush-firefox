@@ -21,9 +21,13 @@
       .inputBox {
         margin: 10px auto;
       }
-      #errorText {
+      #messageText {
         color: red;
         display: none;
+      }
+      img#loaderIcon {
+        display: none;
+        padding: 0px 20px;
       }
     </style>
   </head>
@@ -41,10 +45,11 @@
           <input id="passwordInput" name="passwordInput" type="password"></input>
         </div>
         <div class="inputBox">
-          <button id="saveButton" class="btn primary">Login</button>
+          <button id="saveButton" class="btn primary">Save</button>
+          <img id="loaderIcon" src="loader.gif"/>
           <button id="cancelButton" class="btn secondary">Close</button>
         </div>
-        <div id="errorText">Nothing here</div>
+        <div id="messageText">Nothing here</div>
       </div>
     </div>
   </body>
