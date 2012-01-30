@@ -2,4 +2,6 @@
 
 * DONE Auth error should show message in already opened options page, instead of opening a new one.
 
+* TODO New user registration stuff.
 * TODO Login state should be stored in main.js too, and passed to options page when it is loaded.
+* TODO Captcha after too many wrong login attempts.

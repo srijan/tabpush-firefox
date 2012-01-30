@@ -13,6 +13,7 @@ document.getElementById("cancelButton").onclick = (function() {
 self.port.on("loginSucceeded", function() {
   var messageText = document.getElementById("messageText");
   document.getElementById("saveButton").style.display = 'inline';
+  document.getElementById("saveButton").innerHTML = "Update";
   document.getElementById("loaderIcon").style.display = 'none';
   messageText.innerHTML = "Login Successful";
   messageText.style.color = 'green';
@@ -25,10 +26,12 @@ self.port.on("authError", function() {
   messageText.style.color = 'red';
   messageText.style.display = 'block';
   document.getElementById("saveButton").style.display = 'inline';
+  document.getElementById("saveButton").innerHTML = "Update";
   document.getElementById("loaderIcon").style.display = 'none';
 });
 
 self.port.on("setValues", function(login,password) {
   document.getElementById("loginInput").value = login;
   document.getElementById("passwordInput").value = password;
+  document.getElementById("saveButton").innerHTML = "Update";
 });
