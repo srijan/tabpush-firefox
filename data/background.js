@@ -1,8 +1,16 @@
 var session=null;
 DNode.connect('www.tabpush.com',443,{ secure : true },function (remote) {
-  remote.ping(function(data){console.log(data);});
 
-  self.port.emit("initiateStorageCheck");
+  /*
+   * DNode Functions exposed to server
+   */
+  this.pushTab = function(tab) {
+    self.port.emit("addTab",tab);
+  }
+
+  /*
+   * Listening for stuff from main.js
+   */
   self.port.on("serverLogin", function(login,password) {
     remote.userLogin(login,password, function(s) {
       if(s) {
@@ -24,4 +32,10 @@ DNode.connect('www.tabpush.com',443,{ secure : true },function (remote) {
       console.log("checkLogin: false");
     }
   });
+
+  /*
+   * Init actions
+   */
+  remote.ping(function(data){console.log(data);});
+  self.port.emit("initiateStorageCheck");
 });
