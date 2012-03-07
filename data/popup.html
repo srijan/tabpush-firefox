@@ -30,6 +30,10 @@
       div.center {
         text-align:center;
       }
+      #sendingErrorText {
+        color: red;
+        display: none;
+      }
     </style>
   </head>
   <body onload="init()">
@@ -38,7 +42,8 @@
       <label for="destinationInput">Send current tab to:</label>
       <div class="center">
         <input class="large" id="destinationInput" name="destinationInput" type="text" />
-        <button class="btn primary">Send</button>
+        <button class="btn primary" id="sendButton">Send</button>
+        <p id="sendingStatusText"></p>
       </div>
     </div>
 
@@ -51,7 +56,14 @@
         </ul>
       </div>
       <div id="boxesContent">
-        <p class="muted">No tabs in your inbox</p>
+        <div id="inboxDiv">
+          <ul id="inboxList">
+          </ul>
+        </div>
+        <div id="outboxDiv" style="display:none;">
+          <ul id="outboxList">
+          </ul>
+        </div>
       </div>
     </div>
   </body>
