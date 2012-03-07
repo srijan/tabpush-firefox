@@ -13,7 +13,7 @@ DNode({
   self.port.on("serverLogin", function(login,password) {
     remote.userLogin(login,password, function(s) {
       if(s) {
-        self.port.emit("loginSucceeded",login);
+        self.port.emit("loginSucceeded",s.username);
         session = s;
       }
       else {
